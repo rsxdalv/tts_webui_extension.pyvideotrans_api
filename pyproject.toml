@@ -1,24 +1,26 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "tts_webui_extension.pyvideotrans_api"
 version = "0.0.1"
-description = "A template extension for TTS Generation WebUI"
+description = "Custom TTS HTTP API (form-urlencoded) with integration to TTS Generation WebUI adapters."
 readme = "README.md"
 authors = [
-    { name="rsxdalv", email="" }
+    { name = "rsxdalv" },
 ]
-requires-python = ">=3.7"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    # Add your dependencies here
-    # "torch",
+    "fastapi>=0.110",
+    "uvicorn>=0.23",
+    "python-multipart>=0.0.9",
 ]
 urls = { "Homepage" = "https://github.com/rsxdalv/tts_webui_extension.pyvideotrans_api" }
 

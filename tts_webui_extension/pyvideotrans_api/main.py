@@ -77,20 +77,19 @@ def extension__tts_generation_webui():
     pyvideotrans_api_ui()
     
     return {
-        "package_name": "extension_pyvideotrans_api",
+        "package_name": "tts_webui_extension.pyvideotrans_api",
         "name": "PyVideoTrans TTS API",
-        "requirements": "git+https://github.com/rsxdalv/extension_pyvideotrans_api@main",
-        "description": "Custom TTS HTTP API (form-urlencoded) with integration to WebUI adapters.",
+        "requirements": "git+https://github.com/rsxdalv/tts_webui_extension.pyvideotrans_api@main",
+        "description": "PyVideoTrans text-to-speech API with WebUI integration.",
         "extension_type": "interface",
         "extension_class": "tools",
         "author": "pyvideotrans",
         "extension_author": "rsxdalv",
         "license": "MIT",
-        "website": "https://github.com/rsxdalv/extension_pyvideotrans_api",
-        "extension_website": "https://github.com/rsxdalv/extension_pyvideotrans_api",
+        "website": "https://github.com/rsxdalv/tts_webui_extension.pyvideotrans_api",
+        "extension_website": "https://github.com/rsxdalv/tts_webui_extension.pyvideotrans_api",
         "extension_platform_version": "0.0.1",
     }
-
 
 if __name__ == "__main__":
     if "demo" in locals():
