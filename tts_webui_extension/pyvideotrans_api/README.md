@@ -28,6 +28,9 @@ JSON response:
 
 ## Next steps
 
-- Bind `api.tts_api_handler` (preferred) or `api.tts_stub_handler` to a real HTTP endpoint (FastAPI/Flask/Gradio) that accepts `application/x-www-form-urlencoded`.
-- Replace the placeholder URL with an actual served MP3 path after synthesis.
-- Optionally add unit tests for validators and edge cases.
+- Start a dedicated FastAPI server from the extension UI: use the "Start FastAPI server" button (default port 8877).
+	- Endpoint: `POST http://127.0.0.1:<port>/api/pyvideotrans/tts`
+	- Form fields: `text`, `language`, `voice`, `rate`, `ostype`, `extra` (optional JSON string)
+	- Response JSON: `{"code": 0|>0, "msg": "ok"|"error", "data": "http://127.0.0.1:<port>/outputs/<file>.mp3"|""}`
+- The server also serves generated audio from `GET /outputs/<filename>`.
+- If the shared TTS service is not installed/available, the API responds with `code` > 0 and an error `msg`.
