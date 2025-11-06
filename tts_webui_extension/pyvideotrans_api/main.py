@@ -1,6 +1,5 @@
 import gradio as gr
 
-
 def pyvideotrans_api_ui():
     gr.Markdown(
         """

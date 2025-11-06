@@ -24,10 +24,10 @@ JSON response:
 
 - `api/schemas.py`: data shapes (input form and response types)
 - `api/service.py`: validation and stubbed synthesis logic
-- `api/routes.py`: framework-agnostic handler function `tts_stub_handler`
+- `api/routes.py`: framework-agnostic handlers `tts_stub_handler` (placeholder) and `tts_api_handler` (uses shared TTS service when available)
 
 ## Next steps
 
-- Bind `api.tts_stub_handler` to a real HTTP endpoint (FastAPI/Flask/Gradio) that accepts `application/x-www-form-urlencoded`.
+- Bind `api.tts_api_handler` (preferred) or `api.tts_stub_handler` to a real HTTP endpoint (FastAPI/Flask/Gradio) that accepts `application/x-www-form-urlencoded`.
 - Replace the placeholder URL with an actual served MP3 path after synthesis.
 - Optionally add unit tests for validators and edge cases.
