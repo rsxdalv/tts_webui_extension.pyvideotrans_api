@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tts_webui_extension.pyvideotrans_api"
-version = "0.0.1"
+version = "0.0.2"
 description = "Custom TTS HTTP API (form-urlencoded) with integration to TTS Generation WebUI adapters."
 readme = "README.md"
 authors = [
@@ -25,4 +25,4 @@ dependencies = [
 urls = { "Homepage" = "https://github.com/rsxdalv/tts_webui_extension.pyvideotrans_api" }
 
 [tool.setuptools.packages.find]
-namespace = true
+namespaces = true
